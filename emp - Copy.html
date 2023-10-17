@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior:smooth;
+      list-style: none;
+      text-decoration: none;
+    }
+    :root{
+    --main-color:#fff;
+    --text-color:#000;
+    --bg-color:#E5D3B3;
+    --big-font:5rem;
+    --h2-font:2.25rem;
+    --p-font:0.9rem;
+  }
+  *::selection{
+    background: var(--main-color);
+    color: #fff;
+  }
+body{
+    color: var(--text-color);
+    background: var(--bg-color);
+  }
+  header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+padding: 30px 170px;
+ background: var(--bg-color);
+}
+.logo{
+    color: var(--main-color);
+    font-weight:600 ;
+    font-size:2.4rem ;
+  }
+ .navbar{
+    display: flex;
+  }
+  .navbar a{
+  
+    color: var(--text-color);
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    font-weight: 500;
+  }
+ .navbar a:hover{
+    color: var(--main-color);
+    transition: .4s;
+  }
+#menu-icon{
+    font-size:2rem ;
+    cursor: pointer;
+    display: none;
+  }
+section{
+    padding: 70px 17%;
+  }
+.home{
+    width: 100%;
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 1.5rem;
+    align-items: center;
+  }
+.home-img img{
+    max-width: 100%;
+    width: 600px;
+    height: 80%;
+     clip-path: circle(40%);
+  }
+.home-text h1{
+    font-size: 3rem ;
+    color: var(--main-color);
+  }
+ .home-text h2{
+     font-size: var(--h2-font);
+     margin: 1rem 0 2rem;
+   }
+ .btn {
+     display: inline-block;
+     padding: 10px  20px;
+     background: var(--main-color);
+     color: black;
+     border-radius: 0.5rem;
+   }
+.btn:hover{
+     transform: scale(1.2) translateY(10px);
+     transition: .4s;
+   }
+.prog{
+     display: grid;
+     grid-template-columns: repeat(2,2fr);
+     grid-gap: 1.5rem;
+     align-items: center;
+   }
+ .about-img img{
+     max-width: 100%;
+     width: 480px;
+     height: auto;
+   }
+ .about-text span{
+    color: var(--main-color);
+    font-weight: 600;
+  }
+.about-text h2{
+    font-size: var(--h2-font);
+  }
+  .about-text p{
+    margin: 0.8rem 0 1.8rem;
+    line-height: 1.7;
+  }
+ .heading{
+    text-align: center;
+  }
+
+  .heading span{
+    color: var(--main-color);
+    font-weight: 600;
+  }
+ .heading h2{
+    font-size: var(--h2-font);
+  }
+  .menu-container{
+    display: grid;
+    grid-gap: 1.5rem;
+    align-items: center;
+  }
+ .box{
+    position: relative;
+    margin-top: 4rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:10px;
+    border-radius: 0.1rem;
+   
+ }
+ .box h2{
+  font-size: 1.3rem;
+  color: #000;
+   
+ }
+ .box a{
+  font-size: var(--p-font);
+  color: black;
+  font-weight: 600;
+   
+ }
+ .s-box{
+  text-align: center;
+  padding: 20px 30px;
+   
+ }
+ .main{
+  display: flex;
+  flex-wrap: wrap;
+   
+ }
+ .footer{
+  padding: 10px 0;
+   
+ }
+ .col{
+  width: 25%;
+color: #fff;
+   
+ }
+ .col h4{
+  font-size: 1.25rem;
+  color: var(--text-color);
+  margin-bottom: 25px;
+  position: relative;
+   
+ }
+ .col h4::before{
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 50px;
+  left: 0;
+  bottom: -8px;
+   
+ }
+ .col a {
+  color: #fff;
+  font-size: 1.1rem;
+  display: block;
+  text-transform: capitalize;
+  transform: 4s;
+   
+ }
+ .col a:hover{
+
+transform: scale(0.9) translateX(10px);
+     transition: .4s;
+color:#000;
+   
+ }
+  
+  </style>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="veiwport" content="width=device-width, initial-scale=1.0"/>
+    <title>Web</title>
+    <link rel="stylesheet" type="text/css" href="emp.css" />
+    <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+ <header>
+      <a href="#" class="logo">Employees</a>
+      <div class="bx bx-menu" id="menu-icon"></div>
+      <u1 class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#prog">Progress</a></li>
+        <li><a href="#train">Training</a></li>
+        <li><a href="#nxt">Next Events</a></li>
+        <li><a href="#contacts">Contacts</a></li>
+      </u1>
+    </header>
+  <section class="home" id="home">
+      <div class="home-text">
+        <h1>Employee</h1>
+        <h2>Training Journey</h2>
+        <a href="Document.html "target="blank" class="btn">Start Journey</a>
+      </div>
+<div class="home-img">
+        <img src="C:\Users\Anisha\Desktop\New folder\sec.jpg"
+      </div>
+    </section>
+<section class="prog" id="prog">
+      <div class="about.img">
+        <img src="C:\Users\Anisha\Desktop\New folder\sss.jpg">
+</div>
+ <div class="about-text">
+           <span></span>
+           <h2>Your Progress</h2>
+           <p>As you can the progress that you made so far</p>
+<a href="Document.html" target="blank"  class="btn">Start Training</a>
+
+         </div>
+      
+    </section>
+<section class="train" id="train">
+      <div class="heading">
+        <span>Training Sections</span>
+        <h2>You can start Now!</h2>
+      </div>
+      <div class="menu-container">
+        <div class="box">
+          <div class="box-img">
+            <img src="C:\Users\Anisha\Desktop\New folder\ff.jpg">
+          </div>
+ <h2>Soft Skills</h2>
+          
+           <a href="document.html" target="blank">Start Now</a>
+        
+        </div>
+<div class="box">
+          <div class="box-img">
+            <img src="C:\Users\Anisha\Desktop\New folder\svs.jpg">
+          </div>
+          <h2>Presentation</h2>
+          
+           <a href="document.html" target="blank">Start Now</a>
+        
+        </div>
+<div class="box">
+          <div class="box-img">
+            <img src="C:\Users\Anisha\Desktop\New folder\ll.jpg">
+          </div>
+          <h2>Aptitude</h2>
+          
+           <a href="#" target="blank">Start Now</a>
+          
+        </div>
+      </div>
+      
+    </section>
+<section class="nxt" id="nxt">
+      <div class="heading">
+      
+        <h2>We provide next section SOON!</h2>
+      </div>
+      <div class="service-container">
+        <div class="s-box">
+          <img src="C:\Users\Anisha\Desktop\New folder\iv.jpg">
+          <p>Please complete the above sections</p>
+        </div>
+      </div>
+      
+    </section>
+<section id="contacts">
+        <div class="footer">
+          <div class="main">
+            <div class="col">
+              <h4>Menu links</h4>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Progress</a></li>
+                <li><a href="#">Training sections</a></li>
+                <li><a href="#">New Events</a></li>
+              </ul>
+            </div>
+<div class="col">
+              <h4>Sections</h4>
+              <ul>
+                <li><a href="#">Soft Skills</a></li>
+                <li><a href="#">Presentation</a></li>
+                <li><a href="#">Aptitude</a></li>
+              </ul>
+            </div>
+<div class="col">
+              <h4>Information</h4>
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms&Condition</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <h4> Contact Us</h4>
+              <div class="social">
+                <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                 <a href="#"><i class='bx bxl-instagram' ></i></a>
+                  <a href="#"><i class='bx bxl-whatsapp'></i></a>
+              </div>
+            </div>
+          </div>
+        
+      </section>
+  </body>
+</html>
